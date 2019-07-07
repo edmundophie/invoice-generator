@@ -338,7 +338,8 @@ body {
 .grid {
   border: 1px solid black;
   border-radius: 4px;
-  padding: 1rem; }
+  padding: 1rem;
+  background: lightgray; }
 
 .title {
   text-align: center; }
