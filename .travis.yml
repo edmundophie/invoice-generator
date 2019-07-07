@@ -1,10 +1,12 @@
-# language: ruby
-# before_install:
+language: generic
+before_install:
+- npm install -g typescript
+- npm install -g sass
 #   - gem update --system
 #   - gem install bundler 
-install:
-  - npm install -g typescript
-  - npm install -g sass
+# install:
+#   - npm install -g typescript
+#   - npm install -g sass
 jobs:
   include:
     - stage: build
