@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		// "outDir": "./assets/js",
 		"outFile": "./assets/js/script.js",
-		"watch": true,
+		"watch": false,
         "typeRoots": [
             "./node_modules/@types"
         ],
