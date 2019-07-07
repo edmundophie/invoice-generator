@@ -1,0 +1,92 @@
+.body {
+    padding: 0 3%;
+    // background: green;
+}
+
+.container {
+    margin: auto;
+    // background: bisque;
+    max-width: 350px;
+}
+
+.grid {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.form__title {
+    margin:0;
+    text-align: center;
+    padding: 0 1rem 1rem;
+}
+
+.form__row {
+    padding: 1rem;
+}
+
+.form__note {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.label--horizontal {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.input--text {
+    display: inline-block;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    padding: 0.5rem;
+    text-align: right;
+    letter-spacing: 0.1rem;
+}
+
+.input--disabled {
+    background: rgba(158, 157, 157, 0.404);
+    
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
+.input--success {
+    background: $default-success;
+    border: 1px solid $default-success-hover;
+    color: $default-success-hover;
+}
+
+.label--success {
+    color: $default-success-hover;
+}
+
+.btn {
+    border-radius: 3px;
+    padding: 1rem;
+    background: $default-primary;
+    color: $default-primary-hover;
+    border: 1px solid  $default-primary-hover;
+
+    &:hover {
+        background: $default-primary-hover;
+        cursor: pointer;
+        color: $default-primary;
+        border: 1px solid  $default-primary;
+    }
+}
+
+.total__input {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#invoiceDate {
+    text-decoration: underline;
+}

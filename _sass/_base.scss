@@ -1,0 +1,42 @@
+@import 'normalize';
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+$default-primary: #C6CCB2;
+$default-primary-hover: #BF4E30;
+$default-success: #C6CCB2;
+$default-success-hover: #093824;
+
+
+body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  // line-height: 1.4;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: 5rem;
+  letter-spacing: -.003em;
+  background: rgb(247, 247, 248);
+}
+
+
+.link {
+  color: $default-primary;
+  text-decoration: none;
+  margin: 0;
+}
+
+.link--decorated {
+  border-bottom: 1px dotted $default-primary;
+}
+
+
+
