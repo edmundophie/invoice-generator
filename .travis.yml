@@ -1,14 +1,13 @@
 language: node_js
 before_install:
 - npm install -g typescript
-- npm install -g sass 
-# install:
-#   - npm install -g typescript
-#   - npm install -g sass
+- npm install -g sass
+install:
+- npm install
 jobs:
   include:
-    - stage: build
-      script: ./build.sh
+  - stage: build
+    script: "./build.sh"
 deploy:
   provider: pages
   skip_cleanup: true
@@ -19,5 +18,5 @@ deploy:
   local_dir: public
   fqdn: invoice.ophie.io
 env:
-  global:
-  - secure: gooyx+pE0BF5DkEGVpuf0Tjvjjb6QIKAcvKf7c8c375zfTf/9hmFwWU0B7JoXEttAT7DEUwJ6xyW89f/rhzTCPhb0vmKD9w0BEJ6t7Vp8Lmgp7d5KMu3hg3/w7GGuIL1q9NZyV49NxG/H2EpKXOPkR8sMRMpnOR+65Zdbe7F/BuKcjrt1oZ25usmTUqarfaeT3Z7P0n2sn+JAYqd8/zc+w0P0WNLyYoNb8AqNCLQyaAZ3kTSCcT80dNH3SJn3z6r7418ydLwaL5Vbr4I54GkMFji2hNwvYyYBM61TvQVVHDatzhWCb+mIC9ooGuUwGKTEfjtSYyHDbl6dY+4tZXOEGMklvHjVuNaOb3hrJ/7mXYs41mhDNsn/vR/3AJT2os00GInoevQljpWHMBAg8xyRhDO2lO3jHQ+Uk5uiU83RTJHLah2nYfNkBuLFEq6s5wo2d1jbhCd1VFaI2UemmNtsFjNOO9NYui2/OTeXbWbxtIBl/0zsHQggrnN8dFXL/H14Hc6t+eiS/eqSgP0quJ8Bef7z4YX+q24tqPZwPPpblF2yZSLfW9KJXhxWCbQi8oMQSf/3QSfhBY/S0g2Nj1yhOxGXKEXVy7ugiQYci/13uCxpbXb33M1s4Lp2gzAMPx1s+DlyacjPsOLPQEj6lyHd1KoF8LoV0MRkauFUh7sYR8=
+  matrix:
+    secure: HI3iq6lMkaQ0H20JcOC92Q8zkHUwb9yHlg27md+9LVdkr0XYWmXrOGjNPPEilnfAgwvfY0alxG5xbGQsrPmIXkUdPrsraLLTiN6X2mKSUDTga8pCMIUW3w5eE3Ubr2HZP5+agC1ddsuj+GOa20NG1u2cqoToievUE7ibNFmjaBfBKWtAsMiZyMCA/L1yokux8swRtTTU3ClP6Jw31zC8oo4WSfJqAB7DLwUd2bnQn9kU/Sb9cEVGsQIMngLfGDMv63PuKM70Ljv+U11rbIvSP0OSYqjpJZrJ4BXuyHtxoxPY3NMQ+MveWTQ404552KoboGikSuoc4v79ZDcpt64kWn0rWskJlln7eMD7qzDrhYXHF6Ifwygcj+3WSfOt/P+qHpiydwM1fZx887a0E+1FzJWeShuvxtb7M0MEBFfawyEW7Fmcdw2bdn+Y8mEx2JccJcn38SjDFfQILi4wT29Xj5F1MrisB5mE+a7gpm5EheK33SS4MqBywPAn1CTqxfXnSHlcbnuakBygvQUcLrG87g68/hTG7fmmYyjSPNEu6kKcX+eIZtunFkLJbwreQaEK4uyDRXyrNUm21VPak0cbnE5Fr92I8UWFacMEmgvtws9nGRO59jQI4x5xVQ0PqKeha9lCMgwDwI2NdJhEuNIEG+YyVCzoi/Q2l/YXYqaeJA8=

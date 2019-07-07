@@ -1,5 +1,5 @@
 #!/bin/bash
 
-tsc -p tsconfig.prod.json
+tsc & 
 sass --watch ./_sass:./assets/css & 
 http-server ./ -p 3000 & 
