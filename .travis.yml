@@ -10,14 +10,14 @@ jobs:
     - stage: build
       script: ./build.sh
 deploy:
- provider: pages
- skip_cleanup: true
- github_token: "$GH_TOKEN"
- keep_history: true
- on:
-   branch: master
- local_dir: public
- fqdn: invoice.ophie.io
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GH_TOKEN"
+  keep_history: true
+  on:
+    branch: master
+  local_dir: public
+  fqdn: invoice.ophie.io
 env:
   global:
   - secure: gooyx+pE0BF5DkEGVpuf0Tjvjjb6QIKAcvKf7c8c375zfTf/9hmFwWU0B7JoXEttAT7DEUwJ6xyW89f/rhzTCPhb0vmKD9w0BEJ6t7Vp8Lmgp7d5KMu3hg3/w7GGuIL1q9NZyV49NxG/H2EpKXOPkR8sMRMpnOR+65Zdbe7F/BuKcjrt1oZ25usmTUqarfaeT3Z7P0n2sn+JAYqd8/zc+w0P0WNLyYoNb8AqNCLQyaAZ3kTSCcT80dNH3SJn3z6r7418ydLwaL5Vbr4I54GkMFji2hNwvYyYBM61TvQVVHDatzhWCb+mIC9ooGuUwGKTEfjtSYyHDbl6dY+4tZXOEGMklvHjVuNaOb3hrJ/7mXYs41mhDNsn/vR/3AJT2os00GInoevQljpWHMBAg8xyRhDO2lO3jHQ+Uk5uiU83RTJHLah2nYfNkBuLFEq6s5wo2d1jbhCd1VFaI2UemmNtsFjNOO9NYui2/OTeXbWbxtIBl/0zsHQggrnN8dFXL/H14Hc6t+eiS/eqSgP0quJ8Bef7z4YX+q24tqPZwPPpblF2yZSLfW9KJXhxWCbQi8oMQSf/3QSfhBY/S0g2Nj1yhOxGXKEXVy7ugiQYci/13uCxpbXb33M1s4Lp2gzAMPx1s+DlyacjPsOLPQEj6lyHd1KoF8LoV0MRkauFUh7sYR8=
