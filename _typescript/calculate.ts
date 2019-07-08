@@ -1,7 +1,3 @@
-function hello(test) {
-    console.log("hello");
-}
-
 function calculateFee(exchangeRate, trxAmountSrc) {
     const feePercentage = 0.04;
     const minFeeSrc = 3.0;
@@ -15,9 +11,9 @@ function calculateTrxAmountDest(exchangeRate, trxAmountSrc) {
     return Math.ceil(trxAmountSrc*exchangeRate);
 }
 
-var trxAmountDest;
-var feeAmountDest;
-var totalDest;
+var trxAmountDest = 0;
+var feeAmountDest = 0;
+var totalDest = 0;
 var invoiceDate;
 
 function calculateInvoice(exchangeRate, trxAmountSrc) {

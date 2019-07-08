@@ -1,6 +1,3 @@
-function hello(test) {
-    console.log("hello");
-}
 function calculateFee(exchangeRate, trxAmountSrc) {
     var feePercentage = 0.04;
     var minFeeSrc = 3.0;
@@ -10,9 +7,9 @@ function calculateFee(exchangeRate, trxAmountSrc) {
 function calculateTrxAmountDest(exchangeRate, trxAmountSrc) {
     return Math.ceil(trxAmountSrc * exchangeRate);
 }
-var trxAmountDest;
-var feeAmountDest;
-var totalDest;
+var trxAmountDest = 0;
+var feeAmountDest = 0;
+var totalDest = 0;
 var invoiceDate;
 function calculateInvoice(exchangeRate, trxAmountSrc) {
     trxAmountDest = calculateTrxAmountDest(exchangeRate, trxAmountSrc);
@@ -68,7 +65,4 @@ function downloadInvoice() {
         link.href = canvas.toDataURL("image/png");
         link.click();
     });
-}
-function generate() {
-    console.log("worlds");
 }

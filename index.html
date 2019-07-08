@@ -14,20 +14,20 @@
     <h1 class="title">Invoice Generator</h1>
     <main class="container">
         <div style="margin-bottom:.5rem">
-            <a style="float: right" href="#" onclick="downloadInvoice()"><strong>&#x2913;</strong></a>
+            <a style="float: right" href="#" onclick="downloadInvoice()" class="link--undecorated"><strong>&#x2913;</strong></a>
             <div style="clear:right"></div>
         </div>
         <div class="grid" id="invoice">
             <h2 class="form__title"><u>Invoice</u></h2>
             <div class="form__row">
-                <label for="rate" class="label--horizontal">Exchange rate
-                    <small><sub>(USD/IDR)</sub></small></label><input type="number" id="rate" class="input--text"
-                    value="0" oninput="calculate()">
+                <label for="rate" class="label--horizontal">Rate
+                    <small><sub>USD/IDR</sub></small></label><input type="number" id="rate" class="input--text"
+                     oninput="calculate()" placeholder="eg. 14500">
             </div>
             <div class="form__row">
                 <label for="transactionAmountSrc" class="label--horizontal">Trx. amount
                     <small><sub>(USD)</sub></small></label><input type="number" id="transactionAmountSrc"
-                    class="input--text" value="0" oninput="calculate()">
+                    class="input--text"  oninput="calculate()" placeholder="eg. 65.83">
             </div>
             <!-- <div class="form__row">
             <button type="button" class="btn">Generate Invoice</button>
