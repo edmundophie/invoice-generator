@@ -328,6 +328,9 @@ body {
 .link--decorated {
   border-bottom: 1px dotted #C6CCB2; }
 
+.link--undecorated {
+  text-decoration: none; }
+
 .body {
   padding: 0 3%; }
 
