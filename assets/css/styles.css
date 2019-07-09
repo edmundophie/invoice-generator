@@ -342,7 +342,7 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   padding: 1rem;
-  background: lavenderblush; }
+  background: #fde3ec; }
 
 .title {
   text-align: center; }
@@ -403,5 +403,8 @@ body {
 
 #invoiceDate {
   text-decoration: underline; }
+
+#invoice {
+  padding: .5rem; }
 
 /*# sourceMappingURL=styles.css.map */
