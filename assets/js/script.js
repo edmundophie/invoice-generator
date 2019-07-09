@@ -10,7 +10,6 @@ function calculateTrxAmountDest(exchangeRate, trxAmountSrc) {
 var trxAmountDest = 0;
 var feeAmountDest = 0;
 var totalDest = 0;
-var invoiceDate;
 function calculateInvoice(exchangeRate, trxAmountSrc) {
     trxAmountDest = calculateTrxAmountDest(exchangeRate, trxAmountSrc);
     feeAmountDest = calculateFee(exchangeRate, trxAmountSrc);
@@ -38,16 +37,15 @@ function formatDateTime(date) {
     ];
     var year = date.getFullYear();
     var month = monthNames[date.getMonth()];
-    var d = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-    var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
-    var min = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    var d = date.getDate() < 10 ? "0" + date.getDate() : "" + date.getDate();
+    var hour = date.getHours() < 10 ? "0" + date.getHours() : "" + date.getHours();
+    var min = date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes();
     var tz = getTimezoneLabel(date);
-    var dateLabel = d + " " + month + " " + year + " " + hour + ":" + min + " " + tz;
-    return dateLabel;
+    return d + " " + month + " " + year + " " + hour + ":" + min + " " + tz;
 }
 function calculate() {
-    var exchangeRate = +selectId("rate").value;
-    var trxAmountSrc = +selectId("transactionAmountSrc").value;
+    var exchangeRate = parseInt(selectId("rate").value) || 0;
+    var trxAmountSrc = parseInt(selectId("transactionAmountSrc").value) || 0;
     calculateInvoice(exchangeRate, trxAmountSrc);
     selectId("transactionAmountDest").value = numberWithCommas(trxAmountDest);
     selectId("fee").value = numberWithCommas(feeAmountDest);
