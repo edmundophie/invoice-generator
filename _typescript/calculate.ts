@@ -56,8 +56,8 @@ function formatDateTime(date: Date): string {
 }
 
 function calculate(): void {
-    let exchangeRate: number = parseInt(selectId<HTMLInputElement>("rate").value) || 0;
-    let trxAmountSrc: number = parseInt(selectId<HTMLInputElement>("transactionAmountSrc").value) || 0;
+    let exchangeRate: number = parseFloat(selectId<HTMLInputElement>("rate").value) || 0;
+    let trxAmountSrc: number = parseFloat(selectId<HTMLInputElement>("transactionAmountSrc").value) || 0;
     calculateInvoice(exchangeRate, trxAmountSrc);
 
     selectId<HTMLInputElement>("transactionAmountDest").value = numberWithCommas(trxAmountDest);
