@@ -19,15 +19,15 @@
         </div>
         <div id="invoice">
         <div class="grid">
-            <h2 class="form__title"><u>Invoice</u></h2>
+            <h2 class="form__title">Invoice</h2>
             <div class="form__row">
                 <label for="rate" class="label--horizontal">Rate
-                    <small><sub>USD/IDR</sub></small></label><input type="text" id="rate" class="input--text"
+                    <small><sub>USD/IDR</sub></small></label><input type="number" id="rate" class="input--text"
                      oninput="calculate()" placeholder="0">
             </div>
             <div class="form__row">
                 <label for="transactionAmountSrc" class="label--horizontal">Trx. amount
-                    <small><sub>(USD)</sub></small></label><input type="text" id="transactionAmountSrc"
+                    <small><sub>(USD)</sub></small></label><input type="number" id="transactionAmountSrc"
                     class="input--text"  oninput="calculate()" placeholder="0.0">
             </div>
             <!-- <div class="form__row">
