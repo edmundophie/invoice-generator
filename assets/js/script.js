@@ -44,8 +44,8 @@ function formatDateTime(date) {
     return d + " " + month + " " + year + " " + hour + ":" + min + " " + tz;
 }
 function calculate() {
-    var exchangeRate = parseInt(selectId("rate").value) || 0;
-    var trxAmountSrc = parseInt(selectId("transactionAmountSrc").value) || 0;
+    var exchangeRate = parseFloat(selectId("rate").value) || 0;
+    var trxAmountSrc = parseFloat(selectId("transactionAmountSrc").value) || 0;
     calculateInvoice(exchangeRate, trxAmountSrc);
     selectId("transactionAmountDest").value = numberWithCommas(trxAmountDest);
     selectId("fee").value = numberWithCommas(feeAmountDest);
